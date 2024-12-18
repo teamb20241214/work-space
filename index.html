@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- トップページ -->
     <div id="top-page">
@@ -40,6 +43,28 @@
             </div>
         </footer>
     </div>
-    <!-- おみくじの結果を表示するページ japascriptでdomの操作 --> <div id="omikuji-page"></div>
+    <!-- おみくじの結果を表示するページ japascriptでdomの操作 -->
+    <div id="omikuji-page" class="omikuji-page">
+        <h1>ソフトウェア開発みくじ</h1>
+        <hr>
+        <img src="" alt="" id="image">
+        <h1 id="result"></h1>
+        <hr>
+        <div>
+            <p id="comment"></p>
+        </div>
+        <hr>
+        <h3>ラッキー言語</h3>
+        <h3 id="language"></h3>
+        <hr>
+        <h3>ラッキーデータベース</h3>
+        <h3 id="database"></h3>
+        <hr>
+        <h3>ラッキーエディタ</h3>
+        <h3 id="editor"></h3>
+        <button id="close-omikuji">もう一度おみくじを引く</button>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
