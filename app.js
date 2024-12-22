@@ -29,7 +29,7 @@ const result_list = [
 //index.html内のElement
 const btn = document.querySelector('#draw-omikuji');//top-pageのボタンのElement
 const btn_again = document.querySelector('#close-omikuji');//おみくじを閉じるのボタンのElement
-const div_top = document.querySelector('#top-page');//top-pageの表示内容格納用divのElement
+const div_top = document.querySelector('#outter-top');//top-pageの表示内容格納用divのElement
 const div_omikuji = document.querySelector('#omikuji-page');//omikuji-pageの表示内容格納用divのElement
 const img_omikuji = document.querySelector('#image');//omikuji-pageのimgのElement
 const result_omikuji = document.querySelector('#result');//omikuji-pageのおみくじ結果hタグのElement
