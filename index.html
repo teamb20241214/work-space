@@ -10,38 +10,40 @@
 
 <body>
     <!-- トップページ -->
-    <div id="top-page">
-        <section>
-            <!-- おみくじの画像、ボタンを含むdiv -->
-            <div>
-                <!-- おみくじの名前と画像のdiv -->
+    <div id='outter-top'>
+        <div id="top-page">
+            <section>
+                <!-- おみくじの画像、ボタンを含むdiv -->
                 <div>
-                    <h1>ソフトウェア開発</h1>
-                    <h1>みくじ</h1>
-                    <img src="image/omikuji.png">
+                    <!-- おみくじの名前と画像のdiv -->
+                    <div>
+                        <h1>ソフトウェア開発</h1>
+                        <h1>みくじ</h1>
+                        <img src="image/omikuji.png">
+                    </div>
+                    <div>
+                        <button id="draw-omikuji">おみくじを引く</button>
+                    </div>
                 </div>
+            </section>
+            <footer>
                 <div>
-                    <button id="draw-omikuji">おみくじを引く</button>
+                    <!-- おみくじについてと開発者のリンク -->
+                    <div>
+                        <a href="about.html">
+                            <p>このおみくじについて</p>
+                        </a>
+                        <p>|</p>
+                        <a href="developer.html">
+                            <p>開発者一覧</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>@ソフトウェア開発みくじ</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <footer>
-            <div>
-                <!-- おみくじについてと開発者のリンク -->
-                <div>
-                    <a href="about.html">
-                        <p>このおみくじについて</p>
-                    </a>
-                    <p>|</p>
-                    <a href="developer.html">
-                        <p>開発者一覧</p>
-                    </a>
-                </div>
-                <div>
-                    <p>@ソフトウェア開発みくじ</p>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
     <!-- おみくじの結果を表示するページ japascriptでdomの操作 -->
     <div id="omikuji-page" class="omikuji-page">

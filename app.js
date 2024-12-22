@@ -29,7 +29,7 @@ const result_list = [
 //index.html内のElement
 const btn = document.querySelector('#draw-omikuji');//top-pageのボタンのElement
 const btn_again = document.querySelector('#close-omikuji');//おみくじを閉じるのボタンのElement
-const div_top = document.querySelector('#top-page');//top-pageの表示内容格納用divのElement
+const div_top = document.querySelector('#outter-top');//top-pageの表示内容格納用divのElement
 const div_omikuji = document.querySelector('#omikuji-page');//omikuji-pageの表示内容格納用divのElement
 const img_omikuji = document.querySelector('#image');//omikuji-pageのimgのElement
 const result_omikuji = document.querySelector('#result');//omikuji-pageのおみくじ結果hタグのElement
@@ -39,7 +39,8 @@ const database_omikuji = document.querySelector('#database');//omikuji-pageの�
 const editor_omikuji = document.querySelector('#editor');//omikuji-pageのエディタ用hタグのElement
 
 //top-pageのボタンへEvent追加
-btn.addEventListener('click', function () {
+btn.addEventListener('click', function (e) {
+    console.dir(e);
     //2つの表示用divのクラスをtoggleしてCSSのdisplay　propertyを切り替えている
     div_top.classList.toggle('top_hide');
     div_omikuji.classList.toggle('omikuji-page');

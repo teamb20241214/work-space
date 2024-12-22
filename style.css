@@ -1,3 +1,11 @@
+.top_hide {
+    display: none;
+}
+
+.omikuji-page {
+    display: none;
+}
+
 /* 全体のスタイル */
 body {
     font-family: 'Arial', sans-serif;
@@ -23,7 +31,7 @@ section {
 }
 
 /* おみくじコンテナ */
-#top-page > section > div {
+#top-page>section>div {
     text-align: center;
     background-color: #fff;
     padding: 30px;
@@ -90,7 +98,8 @@ footer p {
 
 /* おみくじ結果ページのスタイル */
 #omikuji-page {
-    display: none; /* 初期状態では非表示 */
+    /* display: none; */
+    /* 初期状態では非表示 */
     padding: 20px;
     text-align: center;
     background-color: #fff;
@@ -99,7 +108,7 @@ footer p {
 
 /* レスポンシブデザイン */
 @media (max-width: 600px) {
-    #top-page > section > div {
+    #top-page>section>div {
         padding: 20px;
     }
 
@@ -112,7 +121,8 @@ footer p {
         flex-direction: column;
     }
 
-    footer a, footer p {
+    footer a,
+    footer p {
         margin: 5px 0;
     }
 }
