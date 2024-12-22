@@ -39,8 +39,7 @@ const database_omikuji = document.querySelector('#database');//omikuji-pageの�
 const editor_omikuji = document.querySelector('#editor');//omikuji-pageのエディタ用hタグのElement
 
 //top-pageのボタンへEvent追加
-btn.addEventListener('click', function (e) {
-    console.dir(e);
+btn.addEventListener('click', function () {
     //2つの表示用divのクラスをtoggleしてCSSのdisplay　propertyを切り替えている
     div_top.classList.toggle('top_hide');
     div_omikuji.classList.toggle('omikuji-page');
