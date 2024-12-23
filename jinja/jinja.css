@@ -1,5 +1,13 @@
+html,
 body {
+    height: 100%;
+    margin: 0;
     background: linear-gradient(#f9dcc4, #ffb5a7);
+}
+
+main {
+    margin-bottom: 20px;
+    position: relative;
 }
 
 #title {
@@ -27,6 +35,11 @@ body {
     display: flex;
 }
 
+#subtitle1,
+#subtitle2 {
+    text-align: center;
+}
+
 #paragraph1,
 #paragraph2,
 #img1,
@@ -41,7 +54,16 @@ body {
     object-fit: contain;
 }
 
+#footer {
+    position: fixed;
+}
+
 @media(max-width: 985px) {
+    main {
+        margin-bottom: 270px;
+        position: relative;
+    }
+
     #container {
         flex-direction: column;
     }
