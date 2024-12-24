@@ -1,17 +1,115 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(pink,#ee9b4d);
+    /* background-color: #f0f8ff; */
+    margin: 0;
+    padding: 0;
+}
 .top_hide {
     display: none;
 }
 
-.omikuji-page {
+.omikuji-top {
     display: none;
 }
 
-/* 全体のスタイル */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
+/* おみくじページの設定 */
+.omikuji-page {
+    /* background: linear-gradient(pink,#ee9b4d); */
+    color: #dc3545;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+}
+/* おみくじの外枠 */
+.result-outer {
+    overflow: scroll;
+    padding: 0.2rem;
+    scrollbar-width: thin;
+}
+/* おみくじの内枠 */
+.result-inner {
+    width: 260px;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: thick double #ff0000;
+    outline: 0.2rem solid #ff0000;
+    background-color: white;
+}
+.result-title {
+    align-items: center;
+}
+.result-title h4 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+hr {
+    border-top: 1px solid #ff0000;
+    border-bottom: 0.5px solid black;
+    width: 100%;
+}
+
+/* 結果の表示 */
+.result img {
+    width: 100%;
+}
+
+/* 結果のコメントのフォントサイズ設定 */
+.result-comment {
+    font-size: small;
+}
+
+/* 結果を中央に表示 */
+.result h1 {
+    text-align: center;
+}
+
+/* ラッキーアイテムを中央に揃える */
+.result-lucky-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* ラッキーアイテムのmarginを設定 */
+.result-lucky-items p{
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.result-lucky-items h3{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* おみくじを閉じるボタンのスタイル */
+#close-omikuji {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: small;
+}
+#close-omikuji:hover {
+    background-color: #ff4500;
 }
 
 /* トップページの中央揃え */

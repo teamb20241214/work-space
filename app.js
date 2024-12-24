@@ -30,7 +30,7 @@ const result_list = [
 const btn = document.querySelector('#draw-omikuji');//top-pageのボタンのElement
 const btn_again = document.querySelector('#close-omikuji');//おみくじを閉じるのボタンのElement
 const div_top = document.querySelector('#outter-top');//top-pageの表示内容格納用divのElement
-const div_omikuji = document.querySelector('#omikuji-page');//omikuji-pageの表示内容格納用divのElement
+const div_omikuji = document.querySelector('#omikuji-top');//omikuji-pageの表示内容格納用divのElement
 const img_omikuji = document.querySelector('#image');//omikuji-pageのimgのElement
 const result_omikuji = document.querySelector('#result');//omikuji-pageのおみくじ結果hタグのElement
 const comment_omikuji = document.querySelector('#comment');//omikuji-pageのコメント用hタグのElement
@@ -42,7 +42,7 @@ const editor_omikuji = document.querySelector('#editor');//omikuji-pageのエデ
 btn.addEventListener('click', function () {
     //2つの表示用divのクラスをtoggleしてCSSのdisplay　propertyを切り替えている
     div_top.classList.toggle('top_hide');
-    div_omikuji.classList.toggle('omikuji-page');
+    div_omikuji.classList.toggle('omikuji-top');
     //0~result_listのlength-1の範囲のランダムな整数をnumに格納
     let num = random_int();
     //各エレメントのattributeを設定
@@ -57,7 +57,7 @@ btn.addEventListener('click', function () {
 //omikuji-pageのボタンへEvent追加
 btn_again.addEventListener('click', function () {
     div_top.classList.toggle('top_hide');
-    div_omikuji.classList.toggle('omikuji-page');
+    div_omikuji.classList.toggle('omikuji-top');
 })
 
 //0~result_listのlength-1のランダムな整数を作る関数
