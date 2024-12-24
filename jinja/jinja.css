@@ -3,6 +3,47 @@ body {
     height: 100%;
     margin: 0;
     background: linear-gradient(#f9dcc4, #ffb5a7);
+    margin: 0;
+    padding: 0;
+}
+/* setting for header */
+.site-header {
+    background-color: rgb(237, 165, 165);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+.site-header h1 {
+    padding: 0.5rem;
+    color: black;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0.1rem;
+    vertical-align: sub;
+    list-style-type: none;
+}
+
+.nav-item a{
+    color: gray;
+    padding: 0.4rem;
+    text-decoration: none;
+}
+/* hoverで色の変更と下線を表示 */
+.nav-item a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+/* toggleは見えない */
+.menu-toggle {
+    display: none;
 }
 
 main {
@@ -66,5 +107,24 @@ main {
 
     #container {
         flex-direction: column;
+    }
+    .header-nav {
+        display: none;
+    }
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+    }
+    .menu-toggle {
+        width: 3rem;
+        height: 3rem;
+        display: block;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: .2rem;
+        color: gray;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 }
