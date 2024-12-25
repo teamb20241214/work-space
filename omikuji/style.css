@@ -1,11 +1,12 @@
 /* 全体のスタイル */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(pink,#ee9b4d);
+    background: linear-gradient(pink, #ee9b4d);
     /* background-color: #f0f8ff; */
     margin: 0;
     padding: 0;
 }
+
 .top_hide {
     display: none;
 }
@@ -24,12 +25,14 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 /* おみくじの外枠 */
 .result-outer {
     overflow: scroll;
     padding: 0.2rem;
     scrollbar-width: thin;
 }
+
 /* おみくじの内枠 */
 .result-inner {
     width: 260px;
@@ -45,9 +48,11 @@ body {
     outline: 0.2rem solid #ff0000;
     background-color: white;
 }
+
 .result-title {
     align-items: center;
 }
+
 .result-title h4 {
     font-size: 1.2rem;
     margin-top: 0.5rem;
@@ -87,11 +92,12 @@ hr {
 }
 
 /* ラッキーアイテムのmarginを設定 */
-.result-lucky-items p{
+.result-lucky-items p {
     margin-top: 0;
     margin-bottom: .5rem;
 }
-.result-lucky-items h3{
+
+.result-lucky-items h3 {
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -108,6 +114,7 @@ hr {
     transition: background-color 0.3s ease;
     font-size: small;
 }
+
 #close-omikuji:hover {
     background-color: #ff4500;
 }
@@ -223,4 +230,30 @@ footer p {
     footer p {
         margin: 5px 0;
     }
+}
+
+/* 戻るボタン */
+#return {
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    width: 70px;
+    text-align: center;
+    background-color: #ff6347;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#button:hover {
+    background-color: #ff4500;
+    cursor: pointer;
+}
+
+#button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
 }
