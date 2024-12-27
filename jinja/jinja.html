@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jinja Recursion</title>
     <link rel="stylesheet" href="jinja.css">
+    <!-- SwiperのCSSを追加 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -33,7 +35,30 @@
     </header>
 
     <!-- てんしんさん担当 -->
-    <section></section>
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- スライド1 -->
+                <div class="swiper-slide">
+                    <p>神社の歴史について学ぶことで、心を豊かにしましょう。</p>
+                </div>
+                <!-- スライド2 -->
+                <div class="swiper-slide">
+                    <p>毎朝の参拝で一日を清々しく始めることができます。</p>
+                </div>
+                <!-- スライド3 -->
+                <div class="swiper-slide">
+                    <p>季節の行事に参加して、地域との繋がりを深めましょう。</p>
+                </div>
+            </div>
+            <!-- ページネーション（ドット） -->
+            <div class="swiper-pagination"></div>
+            <!-- ナビゲーションボタン -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
     <!-- terryfujiwara担当 -->
     <main>
         <div id="title">
@@ -68,10 +93,32 @@
             </div>
         </div>
     </main>
-    <footer　id="footer">
+    <footer id="footer">
         <p>© 2024 Jinja Recursion. All Rights Reserved.</p>
     </footer>
     <script src="jinja.js"></script>
+    <!-- SwiperのJSを追加 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- スライダーの初期化スクリプト -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true, // ループモード
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000, // 自動再生の間隔（ミリ秒）
+                },
+            });
+        });
+    </script>
 </body>
 
 </html>
