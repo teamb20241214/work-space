@@ -33,7 +33,114 @@
     </header>
 
     <!-- てんしんさん担当 -->
-    <section></section>
+    <section>
+        <!-- スライダー部分 -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="picture1.png" alt="スライダー画像1">
+                </div>
+                <div class="slide">
+                    <img src="picture2.png" alt="スライダー画像2">
+                </div>
+                <div class="slide">
+                    <img src="picture3.png" alt="スライダー画像3">
+                </div>
+            </div>
+            <!-- ナビゲーションボタン -->
+            <div class="nav">
+                <button id="prev">←</button>
+                <button id="next">→</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CSSの追加 -->
+    <style>
+        /* スライダー全体のスタイル */
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        /* スライダー内の画像を横並びにする */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        /* 各スライドの画像のスタイル */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    
+        .slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    
+        /* ナビゲーションボタンのスタイル */
+        .nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+    
+        .nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    
+        .nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+    
+    <!-- JavaScriptの追加 -->
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+    
+        let index = 0;
+    
+        // 次のスライドを表示
+        next.addEventListener('click', () => {
+            index++;
+            if (index >= slide.length) {
+                index = 0; // 最後のスライドの次は最初に戻る
+            }
+            updateSlider();
+        });
+    
+        // 前のスライドを表示
+        prev.addEventListener('click', () => {
+            index--;
+            if (index < 0) {
+                index = slide.length - 1; // 最初のスライドの前は最後に戻る
+            }
+            updateSlider();
+        });
+    
+        // スライダーを更新
+        function updateSlider() {
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
+    
+
     <!-- terryfujiwara担当 -->
     <main>
         <div id="title">
@@ -68,7 +175,7 @@
             </div>
         </div>
     </main>
-    <footer　id="footer">
+    <footer id="footer">
         <p>© 2024 Jinja Recursion. All Rights Reserved.</p>
     </footer>
     <script src="jinja.js"></script>
