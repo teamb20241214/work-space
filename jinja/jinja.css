@@ -142,3 +142,50 @@ main {
     }
 }
 
+/* スライダー全体のスタイル */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* スライダー内の画像を横並びにする */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 各スライドの画像のスタイル */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ナビゲーションボタンのスタイル */
+.nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
