@@ -15,6 +15,7 @@ let isGameOver = false;
 let eventCounts = 0;
 const curPlayer = document.querySelectorAll('.player');
 const outer = document.querySelector("#outer");
+const restart = document.querySelector("#restartBtn");
 
 for (let i = 0; i < 9; i++) {
     cells[i].addEventListener("click", function (e) {
@@ -33,11 +34,27 @@ for (let i = 0; i < 9; i++) {
                 cells[i].disabled = true;
             }
         }
-        curPlayer[0].innerText = choosePlayer(eventCounts);
+        curPlayer[0].innerText = choosePlayer(eventCounts - 1);
     })
     cells[i].addEventListener("mouseover", handleMouseOver)
     cells[i].addEventListener("mouseout", handleMouseOut)
 }
+
+restart.addEventListener('click', function (e) {
+    for (let i = 0; i < 9; i++) {
+        cells[i].innerText = "";
+        cells[i].classList.remove('clicked');
+        cells[i].classList.remove('hover');
+        cells[i].disabled = false;
+        gameBoard[i] = ""
+        cells[i].addEventListener("mouseover", handleMouseOver);
+        cells[i].addEventListener("mouseout", handleMouseOut);
+    }
+    isGameOver = false;
+    eventCounts = 0;
+    outer.classList.toggle('hide');
+    curPlayer[0].innerText = choosePlayer(eventCounts);
+})
 
 function handleMouseOver() {
     if (!this.disabled && !this.innerText) {
