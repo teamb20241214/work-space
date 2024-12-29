@@ -1,0 +1,40 @@
+#submit-field {
+    width: 40%;
+}
+#subtitle-field {
+    width: 80%;
+}
+#history-field {
+    width: 80%;
+    height: 60px;
+}
+#hint-field {
+    width: 80%;
+    height: 40px;
+}
+
+#reset-field {
+    width: 80%;
+    border-top: solid 1px white;
+}
+
+#home-button {
+    width: 174px;
+    height: 40px;
+    text-align: center;
+    background-color: #ff4500;
+    padding: 0;
+    border-radius: 6px;
+}
+
+#home-button:hover {
+    background-color: #ff6347;
+    cursor: pointer;
+}
+
+#home-button a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
