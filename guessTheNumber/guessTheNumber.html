@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess The Number</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="stylesheet" href="guessTheNumber.css">
+    </head>
+<body>
+    <div class="container">
+        <section class="section is-flex is-flex-direction-column is-align-items-center m-5 p-4">
+            <div>
+                <h1 class="title has-text-centered p-4">Guess The Number</h1>
+            </div>
+            <div id="subtitle-field">
+                <p class="subtitle has-text-centered p-4">
+                    1から100までの数字の中から、コンピュータがランダムに選んだ数字を当てるゲームです。ユーザーは予想した数字を入力し、コンピュータが「大きい」「小さい」「正解」のフィードバックをします。正解するまで繰り返し挑戦しましょう!!
+                </p>
+            </div>
+            <div id="hint-field" class="py-4 is-flex is-flex-direction-column is-align-items-center">
+                <p id="hint-message"></p>
+            </div>
+            <div id="submit-field" class="py-4 is-flex is-flex-direction-column is-justify-content-center">
+                
+                <input id="guess-input" class="input is-primary my-1" placeholder="整数値を入力してください" type="number">
+                <button id="guess-button" class="button is-primary my-1">Guess</button>
+            </div>
+            <div id="history-field" class="my-5 py-4 is-flex is-flex-direction-column is-justify-content-center" >
+                <h4 class="has-text-white ">あなたの回答履歴</h4>
+                <p id="guess-history"></p>
+            </div>
+            <div id="reset-field" class="section is-flex is-flex-direction-column is-justify-content-center is-align-items-center m-5 py-4">
+                <button id="reset-button" class="button is-primary my-2">初めからプレイする</button>
+                <button id="home-button">
+                    <a href="../jinja/jinja.html">ホームに戻る</a>
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="guessTheNumber.js"></script>
+</body>
+</html>
